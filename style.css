@@ -121,7 +121,30 @@ body {
         .icon:hover {
           transform: scale(1.1); /* Slightly increase size on hover */
         }
-		 
+	/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar a {
+      padding: 10px 5px;
+  }
+
+  .text {
+      font-size: 16px;
+  }
+
+  .logo img {
+      height: 40px;
+  }
+
+  .icon {
+      width: 30px; /* Adjust width for smaller screens */
+  }
+}
+.slideshow-container{
+  position: relative;
+  max-width: 50%;
+  margin: auto;
+  overflow: hidden;
+}	 
 
 		
 		
