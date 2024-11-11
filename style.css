@@ -151,6 +151,10 @@ footer p {
     right: 20px;
 }
 
+.close-menu {
+    display: none;
+}
+
 @media (max-width: 768px) {
     /* Hide desktop menu */
     .navbar nav {
