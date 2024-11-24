@@ -7,7 +7,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
 
         if (targetSection) {
             window.scrollTo({
-                top: targetSection.offsetTop - 60,
+                top: targetSection.offsetTop - 0,
                 behavior: 'smooth'
             });
         }
