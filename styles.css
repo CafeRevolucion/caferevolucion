@@ -14,12 +14,14 @@ body {
 
 /* Header and Navbar */
 header {
-    background-color: transparent;
     padding: 0;
     position: sticky;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    position: fixed;
     z-index: 1000;
+    
 }
 
 .navbar {
@@ -63,12 +65,20 @@ header {
 	
 }
 
+#home{
+    min-height: 100vh;
+    scroll-margin-top: 125.2px;
+
+
+}
+
 /* back img Section */
 .img {
     background: url('revbg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 350px 20px;
+    height: 80vh;
 }
 
 .img h2 {
@@ -85,6 +95,8 @@ header {
     background: #f4f4f4;
     padding: 200px 20px;
     text-align: center;
+    min-height: 100vh;
+    scroll-margin-top: 125.2px;
 }
 
 #about h2 {
@@ -100,11 +112,16 @@ header {
 }
  /* Contact section */
  .container{
-	 width: 940px;
-	 margin: auto;
-	 display: flex;
-	 justify-content: center;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 25px 25px 0 0;
+    color: #fff;
 }
+
  .social-icons{
 	 text-align: center;
 	 padding: 0;
@@ -121,8 +138,12 @@ header {
 
 /* Products Section */
 #products {
-    padding: 320px 100px;
+    padding: 100px 2rem;
+    min-height: 100vh;
     text-align: center;
+    scroll-margin-top: 125.2px;
+    margin-bottom: 30px;
+
 }
 
 .section-title {
@@ -170,6 +191,10 @@ footer p {
 .footer-content ul{
 	text-align: center;
 }
+.social-icons ul li {
+    text-decoration: none;
+}
+
 
 /* Mobile Menu Styles */
 .menu-toggle {
@@ -181,6 +206,10 @@ footer p {
     top: 20px;
     right: 20px;
 }
+.close-menu {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     /* Hide desktop menu */
