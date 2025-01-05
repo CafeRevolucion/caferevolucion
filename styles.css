@@ -1,3 +1,4 @@
+
 /* Reset default styling */
 * {
     margin: 0;
@@ -21,6 +22,7 @@ header {
     right: 0;
     position: fixed;
     z-index: 1000;
+    background-color: #e8e4c9;
     
 }
 
@@ -34,7 +36,7 @@ header {
 }
 
 .navbar .logo img {
-    width: 118px;
+    width: 120px;
 	
 }
 
@@ -54,7 +56,8 @@ header {
 }
 
 .navbar nav ul li a {
-    color: #fff;
+    color: #000000;
+    background-color: #e8e4c9;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: color 0.3s;
@@ -68,14 +71,11 @@ header {
 #home{
     min-height: 100vh;
     scroll-margin-top: 125.2px;
-
-
+    background-color: #e8e4c9;
 }
-
-/* back img Section */
 .img {
     background: url('revbg.jpg') no-repeat center center/cover;
-    color: #fff;
+    color: #e8e4c9;
     text-align: center;
     padding: 350px 20px;
     height: 80vh;
@@ -89,10 +89,8 @@ header {
 .img p {
     font-size: 1.2rem;
 }
-
 /* About Section */
-#about {
-    background: #f4f4f4;
+#about {   
     padding: 200px 20px;
     text-align: center;
     min-height: 100vh;
@@ -100,16 +98,47 @@ header {
 }
 
 #about h2 {
-    color: #333;
+    color: #ff9800;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 #about p {
+    color: #2a1d00;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
+/* Container for the photo and message */
+    .container-about {
+      display: flex; /* Use flexbox to align items side by side */
+      align-items: center; /* Vertically center the content */
+      justify-content: space-between; /* Space between the items */
+      padding: 30px;
+      background-color: #f4f4f4;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for the image */
+    .container-about img {
+      width: 35%; /* Make the image take up half the container width */
+      border-radius: 20px;
+      max-width: 100%; /* Ensure the image scales responsively */
+    }
+
+    /* Styling for the text */
+    .message {
+      width: 45%; /* Make the message take up the remaining space */
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Optional: Styling for the text heading */
+    .message h2 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
  /* Contact section */
  .container{
     width: 100%;
@@ -119,7 +148,7 @@ header {
     padding: 30px;
     background-color: #333;
     border-radius: 25px 25px 0 0;
-    color: #fff;
+    color: #e8e4c9;
 }
 
  .social-icons{
@@ -135,45 +164,257 @@ header {
       color: white;
 	  font-size: 30px;
 }	
-
-/* Products Section */
 #products {
-    padding: 100px 2rem;
+    padding: 50px 20px;
     min-height: 100vh;
     text-align: center;
-    scroll-margin-top: 125.2px;
-    margin-bottom: 30px;
-
+    background-color: #f8f8f8;
 }
 
+/* Styling for section title */
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #ff9800;
 }
 
-.photo-gallery-images {
+/* Styling for the categories container */
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Individual category styling */
+.category {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Category title styling */
+.category-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Gallery for each category */
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-.photo-gallery-images img {
-    width: 200px;
+/* Individual product card styling */
+.product {
+    position: relative;
+    width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effects for product cards */
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for product image */
+.product img {
+    width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    border-bottom: 2px solid #f0f0f0;
 }
 
-.photo-gallery-images img:hover {
+/* Product info (name, price, and button) styling */
+.product-info {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Product name styling */
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Product price styling */
+.product-price {
+    font-size: 1.1rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Buy button styling */
+.buy-now {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover effect for the Buy button */
+.buy-now:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .category {
+        min-width: 100%;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+
+.contact-section {
+    position: relative;
+    background-image: url('gallery11.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.contact-section h2 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    text-align: center;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+}
+.contact-info, .contact-form {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 32%;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff; 
+}
+
+.contact-info:hover, .contact-form:hover {
     transform: scale(1.05);
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-info p, .contact-form label {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #fff; 
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #f9f9f9; 
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.contact-form button {
+    color: #fff;
+    background-color: #333;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-form button:hover {
+    background-color: #555; 
+    transform: scale(1.1);
+}
+
+
+.social-media a {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #fff; 
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ccc8c8;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #e8e4c9;
+    color: #000000;
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
@@ -201,7 +442,7 @@ footer p {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: #e8e4c9;
     position: absolute;
     top: 20px;
     right: 20px;
